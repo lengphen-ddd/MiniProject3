@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout">
+<head>
+
+<title th:text="#{RoleList}"></title>
+
+
+</head>
+<body>
+
+	<div class="row" layout:fragment="content">
+	
+		<div class="col-md-12">
+			<div class="panel">
+				<div class="panel-heading">
+					<div class="panel-title">
+						<h5 th:text="#{RoleList}"></h5>
+					</div>
+				</div>
+				<div class="panel-body p-20">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th th:text="#{roleid}"></th>
+								<th th:text="#{rolename}"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="role : ${ROLELIST}">
+								<td th:text="${role.role_id}"></td>
+								<td th:text="${role.role_name}"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<div class="content-wrapper">
+	<div class="content-container">
+
+		<!-- ========== LEFT SIDEBAR ========== -->
+		<div class="left-sidebar fixed-sidebar bg-black-300 box-shadow">
+			<div class="sidebar-content">
+				<div class="user-info closed">
+					<img src="http://placehold.it/90/c2c2c2?text=User" alt="John Doe"
+						class="img-circle profile-img">
+					<h6 class="title">John Doe</h6>
+					<small class="info">PHP Developer</small>
+				</div>
+				<!-- /.user-info -->
+
+				<div class="sidebar-nav">
+					<ul class="side-nav color-gray">
+						<li class="nav-header"><span class="" th:text="#{menu}"></span></li>
+						<li><a th:href="@{/dashboard}"><i class="fa fa-dashboard"></i>
+								<span th:text="#{dashboard}"></span></a></li>
+
+						<li class="nav-header"><span class="" th:text="#{user}"></span></li>
+						<li><a th:href="@{/user-cu}"><i class="fa fa-file-text"></i>
+								<span th:text="#{adduser}"></span></a></li>
+						<li><a th:href="@{/user-list}"><i class="fa fa-file-text"></i>
+								<span th:text="#{showuser}"></span></a></li>
+						<li class="nav-header"><span class="" th:text="#{role}"></span></li>
+						<li><a th:href="@{role-cu}"><i class="fa fa-file-text"></i>
+								<span th:text="#{addrole}"></span></a></li>
+						<li><a th:href="@{role-list}"><i class="fa fa-file-text"></i>
+								<span th:text="#{showrole}"></span></a></li>
+					</ul>
+				</div>
+				<!-- /.sidebar-nav -->
+			</div>
+			<!-- /.sidebar-content -->
+		</div>
+		<!-- /.left-sidebar -->
+
+		<div th:replace="shared/_header"></div>
+		<div layout:fragment="content"></div>
+	</div>
+</div>

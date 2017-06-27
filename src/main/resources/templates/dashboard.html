@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout">
+<head>
+
+<title th:text="#{dashboard}"></title>
+
+
+</head>
+<body>
+
+	<div layout:fragment="content">
+		<section class="section">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<a class="dashboard-stat bg-danger" th:href="@{/user-cu}"> <span th:text="'Total User: ' + ${NUMOFUSER}"></span> <br/> <span class="name" th:text="#{register}"></span> <span
+							class="bg-icon"><i class="fa fa-comments"></i></span>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<a class="dashboard-stat bg-primary" th:href="@{/user-list}"> <span th:text="'Total User: ' + ${NUMOFUSER}"></span> <br/> <span class="name" th:text="#{showuser}"></span> <span
+							class="bg-icon"><i class="fa fa-comments"></i></span>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<a class="dashboard-stat bg-danger" th:href="@{/role-cu}"> <span th:text="'Total Role: ' + ${NUMOFROLE}"></span> <br/> <span class="name" th:text="#{addrole}"></span> <span
+							class="bg-icon"><i class="fa fa-comments"></i></span>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<a class="dashboard-stat bg-primary" th:href="@{/role-list}"> <span th:text="'Total Role: ' + ${NUMOFROLE}"></span> <br/> <span class="name" th:text="#{showrole}"></span> <span
+							class="bg-icon"><i class="fa fa-comments"></i></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout">
+<head>
+
+<title th:text="#{register}"></title>
+
+
+</head>
+<body>
+	<div layout:fragment="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel">
+					<div class="panel-heading">
+						<div class="panel-title">
+							<h5 th:text="#{update}"></h5>
+						</div>
+					</div>
+					<div class="panel-body">
+
+						<form class="form-horizontal" th:action="@{/update}"
+							th:object="${USER}" th:method="POST">
+							<div class="form-group">
+								<label class="col-sm-2 control-label" th:text="#{username}">Userame</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" th:field="*{username}" th:value="${USERNAME}">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label" th:text="#{email}">Email</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" th:field="*{email}" th:value="${EMAIL}">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="predefined" class="col-sm-2 control-label"
+									th:text="#{gender}">Gender</label>
+								<div class="col-sm-10">
+									<select class="form-control" th:field="*{gender}" th:value="${GENDER}">
+										<option value="M" th:text="#{male}">Male</option>
+										<option value="F" th:text="#{female}">Female</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label" th:text="#{phonenumber}">Phone
+									Number</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control"
+										th:field="*{phonenumber}" th:value="${PHONE}">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="submit" class="btn btn-primary"
+										th:text="#{update}"></button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

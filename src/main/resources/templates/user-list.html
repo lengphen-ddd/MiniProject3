@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout">
+<head>
+
+<title th:text="#{userlist}"></title>
+
+</head>
+<body>
+
+	<div class="row" layout:fragment="content">
+
+		<div class="col-md-12">
+			<div class="panel">
+				<div class="panel-heading">
+					<div class="panel-title">
+						<h5 th:text="#{userlist}"></h5>
+					</div>
+				</div>
+				<div class="panel-body p-20">
+					<table class="table table-striped">
+						<caption>User Detail</caption>
+						<thead>
+							<tr>
+								<th th:text="#{id}"></th>
+								<th th:text="#{username}"></th>
+								<th th:text="#{email}"></th>
+								<th th:text="#{gender}"></th>
+								<th th:text="#{phonenumber}"></th>
+								<th th:text="#{status}"></th>
+								<th th:text="#{action}"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="user : ${USERLIST}">
+								<td th:text="${user.id}"></td>
+								<td th:text="${user.username}"></td>
+								<td th:text="${user.email}"></td>
+								<td th:text="${user.gender} == 'M' ? 'Male' : 'Female'"></td>
+								<td th:text="${user.phonenumber}"></td>
+								<td th:text="${user.status} == 'Y' ? 'True' : 'False'"></td>
+								<!-- <td th:text="${#dates.format(user.created_date, 'dd-MMM-yyyy')}"></td> -->
+								<td>
+									<a th:href="@{/user-detail/{user_hash}(user_hash=${user.user_hash})}" class="btn btn-primary btn-rounded icon-only" th:title="#{detail}"><i class="fa fa-user"></i></a>
+									<a th:href="@{/update/{user_hash}(user_hash=${user.user_hash})}" class="btn btn-success btn-rounded icon-only" th:title="#{update}"><i class="fa fa-pencil"></i></a>
+									<a th:href="@{/delete/{user_hash}(user_hash=${user.user_hash})}" class="btn btn-danger btn-rounded icon-only" th:title="#{delete}"><i class="fa fa-remove"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

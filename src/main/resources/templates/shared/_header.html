@@ -1,0 +1,33 @@
+
+<div class="container-fluid">
+	<div class="row page-title-div">
+		<div class="col-sm-6">
+			<h2 class="title" th:text="${TITLE_HEADER}"></h2>
+			<p class="sub-title" th:text="${SUB_TITLE_HEADER}"></p>
+		</div>
+		<!-- /.col-sm-6 -->
+		<div class="col-sm-6 right-side">
+			<a class="btn bg-black" th:href="@{${LINK}(lang=en)}">EN</a>
+			<a class="btn bg-black" th:href="@{${LINK}(lang=kh)}">KH</a>
+		</div>
+		<!-- /.col-sm-6 text-right -->
+	</div>
+	<!-- /.row -->
+	<div class="row breadcrumb-div">
+		<div class="col-sm-6">
+			<ul class="breadcrumb">
+				<li><a th:href="@{/}" th:text="#{home}"><i
+						class="fa fa-home"></i></a></li>
+				<li class="active" th:text="${TITLE_HEADER}"></li>
+			</ul>
+		</div>
+		<!-- /.col-sm-6 -->
+		<div class="col-sm-6 text-right hidden-xs">
+			<a href="#"><i class="fa fa-comments"></i> Talk to us</a> <a href="#"
+				class="pl-20"><i class="fa fa-cog"></i> Settings</a>
+		</div>
+		<!-- /.col-sm-6 -->
+	</div>
+	<!-- /.row -->
+</div>
+<!-- /.container-fluid -->

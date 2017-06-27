@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout">
+<head>
+
+<title th:text="#{user}"></title>
+
+</head>
+<body>
+
+	<div class="row" layout:fragment="content">
+
+		<div class="col-md-12">
+			<div class="panel">
+				<div class="panel-body p-20">
+					<div class="panel border-primary no-border border-3-top">
+						<div class="panel-heading">
+							<div class="panel-title">
+								<h5>User Detail</h5>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<table th:object="${USER}" class="table table-striped">
+									<tr>
+										<th th:text="#{username}"></th>
+										<td th:text="*{username}"></td>
+									</tr>
+									<tr>
+										<th th:text="#{email}"></th>
+										<td th:text="*{email}"></td>
+									</tr>
+									<tr>
+										<th th:text="#{phonenumber}"></th>
+										<td th:text="*{phonenumber}"></td>
+									</tr>
+									<tr>
+										<th th:text="#{gender}"></th>
+										<td th:text="*{gender} == 'M' ? 'Male' : 'Female'"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

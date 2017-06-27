@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.utraq.net.nz/thymeleaf/layout">
+<head>
+
+<title layout:title-pattern="$CONTENT_TITLE - $DECORATOR_TITLE">KSHRD</title>
+<script th:replace="shared/_head_script"></script>
+<style th:replace="shared/_style"></style>
+
+</head>
+<body class="top-navbar-fixed">
+	
+	<div th:replace="shared/_nav_bar_header"></div>
+	<div th:replace="shared/_left_side_bar"></div>
+	
+	<div th:replace="shared/_bottom_script"></div>
+	
+</body>
+</html>
