@@ -32,6 +32,8 @@ public class UserController {
 		model.addAttribute("TITLE_HEADER", "Dashboard");
 		model.addAttribute("SUB_TITLE_HEADER", "To manage web page");
 		model.addAttribute("NUMOFUSER", userService.getAllUsers().size());
+		model.addAttribute("TOTALMALE", userService.getTotalGender("M").size());
+		model.addAttribute("TOTALFEMALE", userService.getTotalGender("F").size());
 		model.addAttribute("NUMOFROLE", TempStorage.RoleStorage.size());
 		return "dashboard";
 	}

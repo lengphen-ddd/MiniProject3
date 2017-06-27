@@ -42,9 +42,9 @@
 								<td th:text="${user.status} == 'Y' ? 'True' : 'False'"></td>
 								<!-- <td th:text="${#dates.format(user.created_date, 'dd-MMM-yyyy')}"></td> -->
 								<td>
-									<a th:href="@{/user-detail/{user_hash}(user_hash=${user.user_hash})}" class="btn btn-primary btn-rounded icon-only" th:title="#{detail}"><i class="fa fa-user"></i></a>
-									<a th:href="@{/update/{user_hash}(user_hash=${user.user_hash})}" class="btn btn-success btn-rounded icon-only" th:title="#{update}"><i class="fa fa-pencil"></i></a>
-									<a th:href="@{/delete/{user_hash}(user_hash=${user.user_hash})}" class="btn btn-danger btn-rounded icon-only" th:title="#{delete}"><i class="fa fa-remove"></i></a>
+									<a th:href="@{/user-detail/{user_hash}(user_hash=${user.user_hash})}" class="btn btn-primary btn-rounded icon-only btn-xs" th:title="#{detail}">Detail</i></a>
+									<a th:href="@{/update/{user_hash}(user_hash=${user.user_hash})}" class="btn btn-success btn-rounded icon-only btn-xs" th:title="#{update}">Edit</i></a>
+									<a th:href="@{/delete/{user_hash}(user_hash=${user.user_hash})}" class="btn btn-danger btn-rounded icon-only btn-xs" th:title="#{delete}">Delete</i></a>
 								</td>
 							</tr>
 						</tbody>

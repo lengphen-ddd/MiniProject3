@@ -41,5 +41,10 @@ public class UserServiceImpl implements UserService {
 	public User getUser(String user_hash) {
 		return userRepository.getUser(user_hash);
 	}
+
+	@Override
+	public ArrayList<User> getTotalGender(String gender) {
+		 return userRepository.getTotalGender(gender);
+	}
 	
 }

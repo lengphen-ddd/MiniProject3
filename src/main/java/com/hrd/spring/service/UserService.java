@@ -11,5 +11,6 @@ public interface UserService {
 	public boolean updateUser(User user);
 	public boolean deleteUser(String user_hash);
 	public User getUser(String user_hash);
+	public ArrayList<User> getTotalGender(String gender);
 	
 }

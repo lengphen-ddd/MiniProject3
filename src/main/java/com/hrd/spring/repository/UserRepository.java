@@ -14,6 +14,11 @@ import com.hrd.spring.model.User;
 @Repository
 public interface UserRepository {
 	
+	
+	@Select("SELECT gender FROM users WHERE gender = #{gender}")
+	public ArrayList<User> getTotalGender(String gender);
+	
+	
 	@Select("SELECT id,"
 			+ " username,"
 			+ " email,"
