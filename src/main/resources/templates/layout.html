@@ -9,11 +9,29 @@
 
 </head>
 <body class="top-navbar-fixed">
-	
-	<div th:replace="shared/_nav_bar_header"></div>
-	<div th:replace="shared/_left_side_bar"></div>
-	
-	<div th:replace="shared/_bottom_script"></div>
-	
+
+<!-- 	<div th:replace="shared/_nav_bar_header"></div> -->
+<!-- 	<div th:replace="shared/_left_side_bar"></div> -->
+
+<!-- 	<div th:replace="shared/_bottom_script"></div> -->
+
+
+
+
+
+	<div th:replace="@{shared/_left_side_bar}" ></div>
+	<div id="content" class="app-content box-shadow-z0" role="main" >
+		<div th:replace="@{shared/_nav_bar_header}"></div>
+		<div layout:fragment="content">
+
+			<!-- Body here content -->
+
+		</div>
+	</div>
+<!-- 	<div th:replace="@{/includes/admin/_right_side_bar}"></div> -->
+	<div th:replace="@{shared/_footer}"></div>
+		<div th:replace="shared/_bottom_script"></div>
+
+
 </body>
 </html>

@@ -1,42 +1,134 @@
-<div class="content-wrapper">
-	<div class="content-container">
 
-		<!-- ========== LEFT SIDEBAR ========== -->
-		<div class="left-sidebar fixed-sidebar bg-black-300 box-shadow">
-			<div class="sidebar-content">
-				<div class="user-info closed">
-					<img src="http://placehold.it/90/c2c2c2?text=User" alt="John Doe"
-						class="img-circle profile-img">
-					<h6 class="title">John Doe</h6>
-					<small class="info">PHP Developer</small>
-				</div>
-				<!-- /.user-info -->
+<!-- ############ LAYOUT START-->
 
-				<div class="sidebar-nav">
-					<ul class="side-nav color-gray">
-						<li class="nav-header"><span class="" th:text="#{menu}"></span></li>
-						<li><a th:href="@{/dashboard}"><i class="fa fa-dashboard"></i>
-								<span th:text="#{dashboard}"></span></a></li>
-
-						<li class="nav-header"><span class="" th:text="#{user}"></span></li>
-						<li><a th:href="@{/user-cu}"><i class="fa fa-file-text"></i>
-								<span th:text="#{adduser}"></span></a></li>
-						<li><a th:href="@{/user-list}"><i class="fa fa-file-text"></i>
-								<span th:text="#{showuser}"></span></a></li>
-						<li class="nav-header"><span class="" th:text="#{role}"></span></li>
-						<li><a th:href="@{role-cu}"><i class="fa fa-file-text"></i>
-								<span th:text="#{addrole}"></span></a></li>
-						<li><a th:href="@{role-list}"><i class="fa fa-file-text"></i>
-								<span th:text="#{showrole}"></span></a></li>
-					</ul>
-				</div>
-				<!-- /.sidebar-nav -->
-			</div>
-			<!-- /.sidebar-content -->
+<!-- aside -->
+<div id="aside" class="app-aside modal fade nav-dropdown">
+	<!-- fluid app aside -->
+	<div class="left navside dark dk" layout="column">
+		<div class="navbar no-radius">
+			<!-- brand -->
+			<a class="navbar-brand">
+				<div ui-include="'../assets/images/logo.svg'"></div> <img
+				src="../assets/images/logo.png" alt="." class="hide"> <span
+				class="hidden-folded inline">Isoft.com</span>
+			</a>
+			<!-- / brand -->
 		</div>
-		<!-- /.left-sidebar -->
 
-		<div th:replace="shared/_header"></div>
-		<div layout:fragment="content"></div>
+		<div flex-no-shrink class="b-t">
+			<div class="nav-fold">
+				<a href="dashboard"> <span class="pull-left"> <img
+						th:src="@{resources/admin/assets/images/a0.jpg}" alt="..."
+						class="w-40 img-circle">
+				</span> <span class="clear hidden-folded p-x"> <span
+						class="block _500">Leng Phen</span> <small
+						class="block text-muted"><i
+							class="fa fa-circle text-success m-r-sm"></i>online</small>
+				</span>
+				</a>
+			</div>
+		</div>
+
+
+		<div flex class="hide-scroll">
+			<nav class="scroll nav-light">
+
+				<ul class="nav" ui-nav>
+
+					<li><a href="dashboard"> <span class="nav-icon"> <i
+								class="material-icons">&#xe3fc; <span
+									ui-include="'../assets/images/i_0.svg'"></span>
+							</i>
+						</span> <span class="nav-text" th:text="#{dashboard}"></span>
+					</a></li>
+
+					<li><a th:href="@{user-list}"> <span class="nav-icon">
+								<i class="material-icons">&#xe8f0; <span
+									ui-include="'../assets/images/i_3.svg'"></span>
+							</i>
+						</span> <span class="nav-text" th:text="#{user-list}"></span>
+					</a></li>
+
+					<li><a th:href="@{user-cu}"> <span class="nav-icon">
+								<i class="material-icons">&#xe1b8; <span
+									ui-include="'../assets/images/i_3.svg'"></span>
+							</i>
+						</span> <span class="nav-text" th:text="#{user-cu}"></span>
+					</a></li>
+
+
+
+					<li><a th:href="@{role-list}"> <span class="nav-icon">
+								<i class="material-icons">&#xe8d2; <span
+									ui-include="'../assets/images/i_3.svg'"></span>
+							</i>
+						</span> <span class="nav-text" th:text="#{role-list}"></span>
+					</a></li>
+
+					<li><a href="role-cu"> <span class="nav-icon"> <i
+								class="material-icons">&#xe5c3; <span
+									ui-include="'../assets/images/i_3.svg'"></span>
+							</i>
+						</span> <span class="nav-text" th:text="#{role-cu}"></span>
+					</a></li>
+
+				</ul>
+			</nav>
+		</div>
+
 	</div>
 </div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="content-wrapper"> -->
+<!-- 	<div class="content-container"> -->
+
+<!-- 		<!-- ========== LEFT SIDEBAR ========== -->
+-->
+<!-- 		<div class="left-sidebar fixed-sidebar bg-black-300 box-shadow"> -->
+<!-- 			<div class="sidebar-content"> -->
+<!-- 				<div class="user-info closed"> -->
+<!-- 					<img src="http://placehold.it/90/c2c2c2?text=User" alt="John Doe" -->
+<!-- 						class="img-circle profile-img"> -->
+<!-- 					<h6 class="title">John Doe</h6> -->
+<!-- 					<small class="info">PHP Developer</small> -->
+<!-- 				</div> -->
+<!-- 				/.user-info -->
+
+<!-- 				<div class="sidebar-nav"> -->
+<!-- 					<ul class="side-nav color-gray"> -->
+<!-- 						<li class="nav-header"><span class="" th:text="#{menu}"></span></li> -->
+<!-- 						<li><a th:href="@{/dashboard}"><i class="fa fa-dashboard"></i> -->
+<!-- 								<span th:text="#{dashboard}"></span></a></li> -->
+
+<!-- 						<li class="nav-header"><span class="" th:text="#{user}"></span></li> -->
+<!-- 						<li><a th:href="@{/user-cu}"><i class="fa fa-file-text"></i> -->
+<!-- 								<span th:text="#{adduser}"></span></a></li> -->
+<!-- 						<li><a th:href="@{/user-list}"><i class="fa fa-file-text"></i> -->
+<!-- 								<span th:text="#{showuser}"></span></a></li> -->
+<!-- 						<li class="nav-header"><span class="" th:text="#{role}"></span></li> -->
+<!-- 						<li><a th:href="@{role-cu}"><i class="fa fa-file-text"></i> -->
+<!-- 								<span th:text="#{addrole}"></span></a></li> -->
+<!-- 						<li><a th:href="@{role-list}"><i class="fa fa-file-text"></i> -->
+<!-- 								<span th:text="#{showrole}"></span></a></li> -->
+<!-- 					</ul> -->
+<!-- 				</div> -->
+<!-- 				/.sidebar-nav -->
+<!-- 			</div> -->
+<!-- 			<!-- /.sidebar-content -->
+-->
+<!-- 		</div> -->
+<!-- 		<!-- /.left-sidebar -->
+-->
+
+<!-- 		<div th:replace="shared/_header"></div> -->
+<!-- 		<div layout:fragment="content"></div> -->
+<!-- 	</div> -->
+<!-- </div> -->

@@ -10,33 +10,85 @@
 </head>
 <body>
 
-	<div layout:fragment="content">
-		<section class="section">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-						<a class="dashboard-stat bg-danger" th:href="@{/user-cu}"> <span th:text="'Total User: ' + ${NUMOFUSER}"></span> <br/> <span class="name" th:text="#{register}"></span> <span
-							class="bg-icon"><i class="fa fa-comments"></i></span>
-						</a>
+	<div layout:fragment="content" style="margin-top: 50px;">
+
+		<div class="padding">
+			<div class="row">
+				<div class="col-xs-12 col-sm-4">
+					<div class="box p-a">
+						<div class="pull-left m-r">
+							<span class="w-48 rounded  accent"> <i
+								class="material-icons">&#xE853;</i>
+							</span>
+						</div>
+						<div class="clear">
+							<h4 class="m-a-0 text-lg _300">
+								<a><span th:text="${MESSAGE}"> </span> <span class="text-sm">
+										Users</span></a>
+							</h4>
+							<small class="text-muted">Active 6 users</small>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-						<a class="dashboard-stat bg-primary" th:href="@{/user-list}"> <span th:text="'Total User: ' + ${NUMOFUSER}"></span> <br/> <span class="name" th:text="#{showuser}"></span> <span
-							class="bg-icon"><i class="fa fa-comments"></i></span>
-						</a>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<div class="box p-a">
+						<div class="pull-left m-r">
+							<span class="w-48 rounded primary"> <i
+								class="material-icons">&#xe54f;</i>
+							</span>
+						</div>
+						<div class="clear">
+							<h4 class="m-a-0 text-lg _300">
+								<a>40 <span class="text-sm">Males</span></a>
+							</h4>
+							<small class="text-muted">Active 5 users</small>
+						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-						<a class="dashboard-stat bg-danger" th:href="@{/role-cu}"> <span th:text="'Total Role: ' + ${NUMOFROLE}"></span> <br/> <span class="name" th:text="#{addrole}"></span> <span
-							class="bg-icon"><i class="fa fa-comments"></i></span>
-						</a>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-						<a class="dashboard-stat bg-primary" th:href="@{/role-list}"> <span th:text="'Total Role: ' + ${NUMOFROLE}"></span> <br/> <span class="name" th:text="#{showrole}"></span> <span
-							class="bg-icon"><i class="fa fa-comments"></i></span>
-						</a>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<div class="box p-a">
+						<div class="pull-left m-r">
+							<span class="w-48 rounded warn"> <i class="material-icons">&#xe8d3;</i>
+							</span>
+						</div>
+						<div class="clear">
+							<h4 class="m-a-0 text-lg _300">
+								<a>600 <span class="text-sm">Female</span></a>
+							</h4>
+							<small class="text-muted">Active 3 users</small>
+						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-	</div>
+
+
+
+			<!-- 		<section class="section"> -->
+			<!-- 			<div class="container-fluid"> -->
+			<!-- 				<div class="row"> -->
+			<!-- 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"> -->
+			<!-- 						<a class="dashboard-stat bg-danger" th:href="@{/user-cu}"> <span th:text="'Total User: ' + ${NUMOFUSER}"></span> <br/> <span class="name" th:text="#{register}"></span> <span -->
+			<!-- 							class="bg-icon"><i class="fa fa-comments"></i></span> -->
+			<!-- 						</a> -->
+			<!-- 					</div> -->
+			<!-- 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"> -->
+			<!-- 						<a class="dashboard-stat bg-primary" th:href="@{/user-list}"> <span th:text="'Total User: ' + ${NUMOFUSER}"></span> <br/> <span class="name" th:text="#{showuser}"></span> <span -->
+			<!-- 							class="bg-icon"><i class="fa fa-comments"></i></span> -->
+			<!-- 						</a> -->
+			<!-- 					</div> -->
+			<!-- 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"> -->
+			<!-- 						<a class="dashboard-stat bg-danger" th:href="@{/role-cu}"> <span th:text="'Total Role: ' + ${NUMOFROLE}"></span> <br/> <span class="name" th:text="#{addrole}"></span> <span -->
+			<!-- 							class="bg-icon"><i class="fa fa-comments"></i></span> -->
+			<!-- 						</a> -->
+			<!-- 					</div> -->
+			<!-- 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"> -->
+			<!-- 						<a class="dashboard-stat bg-primary" th:href="@{/role-list}"> <span th:text="'Total Role: ' + ${NUMOFROLE}"></span> <br/> <span class="name" th:text="#{showrole}"></span> <span -->
+			<!-- 							class="bg-icon"><i class="fa fa-comments"></i></span> -->
+			<!-- 						</a> -->
+			<!-- 					</div> -->
+			<!-- 				</div> -->
+			<!-- 			</div> -->
+			<!-- 		</section> -->
+		</div>
 </body>
 </html>
