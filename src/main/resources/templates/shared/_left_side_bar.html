@@ -35,21 +35,21 @@
 
 				<ul class="nav" ui-nav>
 
-					<li><a href="dashboard"> <span class="nav-icon"> <i
+					<li><a href="/dashboard"> <span class="nav-icon"> <i
 								class="material-icons">&#xe3fc; <span
 									ui-include="'../assets/images/i_0.svg'"></span>
 							</i>
 						</span> <span class="nav-text" th:text="#{dashboard}"></span>
 					</a></li>
 
-					<li><a th:href="@{user-list}"> <span class="nav-icon">
+					<li><a th:href="@{/user-list}"> <span class="nav-icon">
 								<i class="material-icons">&#xe8f0; <span
 									ui-include="'../assets/images/i_3.svg'"></span>
 							</i>
 						</span> <span class="nav-text" th:text="#{user-list}"></span>
 					</a></li>
 
-					<li><a th:href="@{user-cu}"> <span class="nav-icon">
+					<li><a href="user-cu"> <span class="nav-icon">
 								<i class="material-icons">&#xe1b8; <span
 									ui-include="'../assets/images/i_3.svg'"></span>
 							</i>
@@ -58,14 +58,14 @@
 
 
 
-					<li><a th:href="@{role-list}"> <span class="nav-icon">
+					<li><a th:href="@{/role-list}"> <span class="nav-icon">
 								<i class="material-icons">&#xe8d2; <span
 									ui-include="'../assets/images/i_3.svg'"></span>
 							</i>
 						</span> <span class="nav-text" th:text="#{role-list}"></span>
 					</a></li>
 
-					<li><a href="role-cu"> <span class="nav-icon"> <i
+					<li><a href="/role-cu"> <span class="nav-icon"> <i
 								class="material-icons">&#xe5c3; <span
 									ui-include="'../assets/images/i_3.svg'"></span>
 							</i>

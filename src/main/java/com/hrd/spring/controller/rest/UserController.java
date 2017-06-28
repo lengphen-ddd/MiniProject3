@@ -1,9 +1,13 @@
 package com.hrd.spring.controller.rest;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.sql.Timestamp;
 import java.util.Map;
 import java.util.UUID;
 
+import org.apache.tomcat.util.buf.StringUtils;
+import org.codehaus.groovy.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -35,6 +39,23 @@ public class UserController {
 		model.addAttribute("TOTALMALE", userService.getTotalGender("M").size());
 		model.addAttribute("TOTALFEMALE", userService.getTotalGender("F").size());
 		model.addAttribute("NUMOFROLE", TempStorage.RoleStorage.size());
+		
+		
+//		String myurl;
+//		try {
+//			myurl = InetAddress.getLocalHost().getHostName();
+//			model.addAttribute("URL", myurl);
+//		} catch (UnknownHostException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+		
+		
+//		String host = System.getenv("COMPUTERNAME");
+//		if (host != null)
+//		model.addAttribute("TEST", host);
+		
 		return "dashboard";
 	}
 
@@ -68,10 +89,12 @@ public class UserController {
 	}
 	
 	@RequestMapping("/update/{user_hash}")
+//	@RequestMapping("/update")
 	public String updateUser(@PathVariable("user_hash") String user_hash, ModelMap model) {
 		model.addAttribute("TITLE_HEADER", "Update User Profile");
 		model.addAttribute("SUB_TITLE_HEADER", "Update User Profile");
 		model.addAttribute("USER", new User());
+//		model.addAttribute("GETUSER", userService.getAllUsers());
 		userHash = user_hash;
 		return "user-update";
 	}

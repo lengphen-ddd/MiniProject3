@@ -23,10 +23,12 @@
 						</div>
 						<div class="clear">
 							<h4 class="m-a-0 text-lg _300">
-								<a><span>Total : </span></span><span th:text="${NUMOFUSER}"> </span> <span class="text-sm">
+								<a><span th:text="#{total}"> : </span></span><span th:text="${NUMOFUSER}"> </span> <span class="text-sm">
 										Users</span></a>
 							</h4>
 							<small class="text-muted">Active 6 users</small>
+							<small class="text-muted"><span th:text="${TEST}"></span></small>
+							<small class="text-muted"><span th:text="${URL}"></span></small>
 						</div>
 					</div>
 				</div>
@@ -39,7 +41,7 @@
 						</div>
 						<div class="clear">
 							<h4 class="m-a-0 text-lg _300">
-								<a><span>Total Male : </span></span><span th:text="${TOTALMALE}"> </span> <span class="text-sm">
+								<a><span th:text="#{totalMale}"> : </span></span><span th:text="${TOTALMALE}"> </span> <span class="text-sm">
 										Users</span></a>
 							</h4>
 							<small class="text-muted">Active 6 users</small>
@@ -54,7 +56,7 @@
 						</div>
 						<div class="clear">
 							<h4 class="m-a-0 text-lg _300">
-								<a><span>Total Female : </span></span><span th:text="${TOTALFEMALE}"> </span> <span class="text-sm">
+								<a><span th:text="#{totalFemale}"> : </span></span><span th:text="${TOTALFEMALE}"> </span> <span class="text-sm">
 										Users</span></a>
 							</h4>
 							<small class="text-muted">Active 6 users</small>

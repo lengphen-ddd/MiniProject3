@@ -20,9 +20,8 @@
 				</div>
 				<div class="panel-body p-20">
 					<table class="table table-striped">
-						<caption>User Detail</caption>
 						<thead>
-							<tr>
+							<tr class="primary">
 								<th th:text="#{id}"></th>
 								<th th:text="#{username}"></th>
 								<th th:text="#{email}"></th>
@@ -44,7 +43,7 @@
 								<td>
 									<a th:href="@{/user-detail/{user_hash}(user_hash=${user.user_hash})}" class="btn btn-primary btn-rounded icon-only btn-xs" th:title="#{detail}">Detail</i></a>
 									<a th:href="@{/update/{user_hash}(user_hash=${user.user_hash})}" class="btn btn-success btn-rounded icon-only btn-xs" th:title="#{update}">Edit</i></a>
-									<a th:href="@{/delete/{user_hash}(user_hash=${user.user_hash})}" class="btn btn-danger btn-rounded icon-only btn-xs" th:title="#{delete}">Delete</i></a>
+									<a th:href="@{/delete/{user_hash}(user_hash=${user.user_hash})}" class="btn btn-danger btn-rounded icon-only btn-xs" th:title="#{delete}" onclick="return confirm('Are you sure you want to delete this item?');">Delete</i></a>
 								</td>
 							</tr>
 						</tbody>
@@ -53,6 +52,15 @@
 			</div>
 		</div>
 	</div>
+
+
+<script type="javascript">
+
+	function deleteUserRow(){
+		alert("hello");
+	}
+	
+</script>
 
 </body>
 </html>
