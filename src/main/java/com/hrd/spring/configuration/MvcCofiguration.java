@@ -17,7 +17,12 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 @Configuration
 @EnableWebMvc
 public class MvcCofiguration extends WebMvcConfigurerAdapter {
-
+	
+	
+	
+	/**
+	 * Configuration CSS and Script
+	 */
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
@@ -25,6 +30,13 @@ public class MvcCofiguration extends WebMvcConfigurerAdapter {
 		registry.addResourceHandler("/files/**").addResourceLocations("file:/opt/FILES_MANAGEMENT/images/");
 	}
 
+	
+	
+	
+	/**
+	 * Configuration languages
+	 * @return
+	 */
 	@Bean
 	public LocaleResolver localeResolver() {
 		CookieLocaleResolver resolver = new CookieLocaleResolver();

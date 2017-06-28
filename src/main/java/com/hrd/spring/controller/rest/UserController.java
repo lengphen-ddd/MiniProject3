@@ -49,8 +49,7 @@ public class UserController {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
-		
-		
+				
 		
 //		String host = System.getenv("COMPUTERNAME");
 //		if (host != null)
@@ -61,9 +60,6 @@ public class UserController {
 
 	@RequestMapping("/user-cu")
 	public String userPage(ModelMap model) {
-		model.addAttribute("LINK", "/user-cu");
-		model.addAttribute("TITLE_HEADER", "Register User");
-		model.addAttribute("SUB_TITLE_HEADER", "To register new user");
 		model.addAttribute("USER", new User());
 		return "user-cu";
 	}
@@ -82,20 +78,14 @@ public class UserController {
 
 	@RequestMapping("/user-list")
 	public String userList(ModelMap model) {
-		model.addAttribute("TITLE_HEADER", "User List");
-		model.addAttribute("SUB_TITLE_HEADER", "Show all user");
 		model.addAttribute("USERLIST", userService.getAllUsers());
 		return "user-list";
 	}
 	
 	@RequestMapping("/update/{user_hash}")
-//	@RequestMapping("/update")
-	public String updateUser(@PathVariable("user_hash") String user_hash, ModelMap model) {
-		model.addAttribute("TITLE_HEADER", "Update User Profile");
-		model.addAttribute("SUB_TITLE_HEADER", "Update User Profile");
-		model.addAttribute("USER", new User());
-//		model.addAttribute("GETUSER", userService.getAllUsers());
+	public String updateUser(@PathVariable("user_hash") String user_hash, ModelMap model) {		
 		userHash = user_hash;
+		model.addAttribute("SHOWUSER", userService.getUser(userHash));
 		return "user-update";
 	}
 	
@@ -114,8 +104,7 @@ public class UserController {
 			user.setPhonenumber(u.getPhonenumber());
 		if (user.getGender() == u.getGender())  
 			user.setGender(u.getGender());
-		userService.updateUser(user);
-		
+		userService.updateUser(user);		
 		return "redirect:/user-list";
 	}
 	
@@ -126,9 +115,7 @@ public class UserController {
 	}
 	
 	@RequestMapping("/user-detail/{user_hash}")
-	public String showUser(ModelMap model, @PathVariable String user_hash) {
-		model.addAttribute("TITLE_HEADER", "User Profile");
-		model.addAttribute("SUB_TITLE_HEADER", "Show Profile of User");
+	public String showUserDetail(ModelMap model, @PathVariable String user_hash) {
 		model.addAttribute("USER", userService.getUser(user_hash));
 		return "/user-profile";
 	}

@@ -10,25 +10,24 @@
 </head>
 <body>
 
-	<div layout:fragment="content" style="margin-top: 50px;">
+	<div layout:fragment="content" style="margin-top: 50px">
 
 		<div class="padding">
 			<div class="row">
 				<div class="col-xs-12 col-sm-4">
 					<div class="box p-a">
 						<div class="pull-left m-r">
-							<span class="w-48 rounded  accent"> <i
-								class="material-icons">&#xE853;</i>
+							<span class="w-48 rounded  accent"> <i class="fa fa-camera-retro fa-5x"></i>
 							</span>
 						</div>
 						<div class="clear">
 							<h4 class="m-a-0 text-lg _300">
-								<a><span th:text="#{total}"> : </span></span><span th:text="${NUMOFUSER}"> </span> <span class="text-sm">
+								<a><span th:text="#{total}"></span>&nbsp;<span th:text="${NUMOFUSER}"> </span> <span class="text-sm">
 										Users</span></a>
 							</h4>
 							<small class="text-muted">Active 6 users</small>
-							<small class="text-muted"><span th:text="${TEST}"></span></small>
-							<small class="text-muted"><span th:text="${URL}"></span></small>
+<!-- 							<small class="text-muted"><span th:text="${TEST}"></span></small> -->
+<!-- 							<small class="text-muted"><span th:text="${URL}"></span></small> -->
 						</div>
 					</div>
 				</div>
@@ -41,7 +40,7 @@
 						</div>
 						<div class="clear">
 							<h4 class="m-a-0 text-lg _300">
-								<a><span th:text="#{totalMale}"> : </span></span><span th:text="${TOTALMALE}"> </span> <span class="text-sm">
+								<a><span th:text="#{totalMale}"></span>&nbsp;<span th:text="${TOTALMALE}"> </span> <span class="text-sm">
 										Users</span></a>
 							</h4>
 							<small class="text-muted">Active 6 users</small>
@@ -56,7 +55,7 @@
 						</div>
 						<div class="clear">
 							<h4 class="m-a-0 text-lg _300">
-								<a><span th:text="#{totalFemale}"> : </span></span><span th:text="${TOTALFEMALE}"> </span> <span class="text-sm">
+								<a><span th:text="#{totalFemale}"></span>&nbsp;<span th:text="${TOTALFEMALE}"> </span> <span class="text-sm">
 										Users</span></a>
 							</h4>
 							<small class="text-muted">Active 6 users</small>
@@ -93,6 +92,7 @@
 			<!-- 				</div> -->
 			<!-- 			</div> -->
 			<!-- 		</section> -->
+		</div>
 		</div>
 </body>
 </html>
