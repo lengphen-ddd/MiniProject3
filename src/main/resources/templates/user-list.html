@@ -38,7 +38,7 @@
 								<td th:text="${user.email}"></td>
 								<td th:text="${user.gender} == 'M' ? 'Male' : 'Female'"></td>
 								<td th:text="${user.phonenumber}"></td>
-								<td th:text="${user.status} == 'Y' ? 'True' : 'False'"></td>
+								<td th:text="${user.status} == 'Y' ? 'Active' : 'UnActive'"></td>
 								<!-- <td th:text="${#dates.format(user.created_date, 'dd-MMM-yyyy')}"></td> -->
 								<td>
 									<a th:href="@{/user-detail/{user_hash}(user_hash=${user.user_hash})}" class="btn btn-primary btn-rounded icon-only btn-xs" th:title="#{detail}">Detail</i></a>

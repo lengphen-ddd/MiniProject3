@@ -40,21 +40,6 @@ public class UserController {
 		model.addAttribute("TOTALFEMALE", userService.getTotalGender("F").size());
 		model.addAttribute("NUMOFROLE", TempStorage.RoleStorage.size());
 		
-		
-//		String myurl;
-//		try {
-//			myurl = InetAddress.getLocalHost().getHostName();
-//			model.addAttribute("URL", myurl);
-//		} catch (UnknownHostException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-				
-		
-//		String host = System.getenv("COMPUTERNAME");
-//		if (host != null)
-//		model.addAttribute("TEST", host);
-		
 		return "dashboard";
 	}
 

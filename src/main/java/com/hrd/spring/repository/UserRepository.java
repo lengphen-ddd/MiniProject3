@@ -30,6 +30,7 @@ public interface UserRepository {
 			+ " WHERE user_hash=#{user_hash}")
 	public User getUser(String user_hash);
 
+	
 	@Select("SELECT id,"
 			+ " username,"
 			+ " email,"
@@ -41,6 +42,7 @@ public interface UserRepository {
 			+ " FROM users ORDER BY 1")
 	public ArrayList<User> getAllUsers();
 
+	
 	@Insert("INSERT INTO users(username,"
 			+ " email,"
 			+ " gender,"
@@ -58,6 +60,7 @@ public interface UserRepository {
 			+ ")")
 	public boolean saveUser(@Param("user") User user);
 
+	
 	@Update("UPDATE users SET"
 			+ " username=#{user.username},"
 			+ " email=#{user.email},"
@@ -67,6 +70,7 @@ public interface UserRepository {
 			+ " created_date=#{user.created_date}"
 			+ " WHERE user_hash=#{user.user_hash}")
 	public boolean updateUser(@Param("user") User user);
+	
 	
 	@Delete("DELETE FROM users WHERE user_hash=#{user_hash}")
 	public boolean deleteUser(String user_hash);
